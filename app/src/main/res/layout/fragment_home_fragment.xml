@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+   >
+    <data>
+        <variable
+            name="viewModel"
+            type="com.naldana.activitysexample.MainViewModel" />
+    </data>
+
+    <LinearLayout
+        android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+    tools:context=".fragment_home">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            android:text="@string/head_team_a" />
+
+        <TextView
+            android:id="@+id/score_team_a_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline1"
+            android:layout_marginTop="@dimen/small_gap"
+            tools:text="@{viewModel.result}" />
+
+        <Button
+            android:id="@+id/action_add_one_team_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_gap"
+            android:text="@string/action_add_gol" />
+
+        <Button
+            android:id="@+id/action_move_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_gap"
+            android:text="@string/action_next" />
+    </LinearLayout>
+
+
+
+</layout>
